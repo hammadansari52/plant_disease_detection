@@ -1,0 +1,46 @@
+.image-on-card {
+	height: 300px;
+}
+body {
+	background: #0cebeb;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#upload-form {
+	margin-top: 5%;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+#show-heading {
+	margin-top: 25%;
+	text-align: center;
+}
+
+#predict-button {
+	width: 100%;
+	margin-top: 20px;
+}
+
+#another-plant-button {
+	width: 50%;
+	margin-left: 25%;
+	margin-top: 20px;
+	/*margin-right: 25%;*/
+	/*text-align: center;*/
+}
+
+#result-heading {
+	margin: 20% auto 0 auto;
+	text-align: center;
+}
+
+#result-list {
+	margin-top: 20px;
+}
+
+.list-group-item {
+	width: 600px;
+	margin: 0 auto;
+}

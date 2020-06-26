@@ -1,0 +1,34 @@
+<%- include('partials/header') %>
+
+<div class="container">
+
+	<h1 id="show-heading">Provide the image to predict the disease of <em><%= plant_name %></em> plant.</h1>
+	<form id="upload-form" action="/plants/<%=plant_name%>" method="post" enctype="multipart/form-data">
+
+		<div class="input-group mb-3">
+		  <div class="custom-file">
+		    <input type="file" accept="image/*" name="image" class="custom-file-input" id="inputGroupFile02" required>
+		    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+		  </div>
+		</div>
+	    <div class="input-group-append">
+			<input id="predict-button" type="submit" class="btn btn-success" value="Predict the Disease">
+	    </div>
+	
+	</form>
+
+	<script>
+            $('#inputGroupFile02').on('change',function(){
+                //get the file name
+                var fileName = $(this).val();
+                if(fileName.length > 40) fileName = fileName.substring(0,40) + ".......";
+                //replace the "Choose a file" label
+                $(this).next('.custom-file-label').html(fileName);
+            })
+    </script>
+
+    <a href="/plants" id="another-plant-button" class="btn btn-success">Choose another Plant</a>
+
+</div>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,142 @@
+<%- include('partials/header') %>
+
+
+
+<div class="container">	
+	<div class="jumbotron">
+		<h1 style="font-size: 5.0em">Plant Disease Detection</h1>
+		<p style="font-size: 1.5em">Provide the image of plant leaf and predict the Disease</p>
+	</div>
+
+	<div class="row">
+			
+		<div class="col-md-6 col-sm-6" style="margin-bottom: 10px;">
+			<div class="card">
+	  			<img src="https://p1.pxfuel.com/preview/584/577/209/fruit-apple-fruit-growing-fruit-tree.jpg" class="card-img-top image-on-card">
+	  			<div class="card-body" style="text-align: center;">
+	    			<h5 class="card-text" style="text-align: center; font-weight: bold;">Apple</h5>
+	    			<form action="/plants/apple" method="GET">
+						<button class="btn btn-primary btn-lg">Provide Image and predict Disease</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6 col-sm-6" style="margin-bottom: 10px;">
+			<div class="card">
+	  			<img src="https://live.staticflickr.com/5064/5874234034_cebb9befa2_b.jpg" class="card-img-top image-on-card">
+	  			<div class="card-body" style="text-align: center;">
+	    			<h5 class="card-text" style="text-align: center; font-weight: bold;">Cherry</h5>
+	    			<form action="/plants/cherry" method="GET">
+						<button class="btn btn-primary btn-lg">Provide Image and predict Disease</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6 col-sm-6" style="margin-bottom: 10px;">
+			<div class="card">
+	  			<img src="https://c1.wallpaperflare.com/preview/76/554/331/corn-on-the-cob-vegetable-food-yellow.jpg" class="card-img-top image-on-card">
+	  			<div class="card-body" style="text-align: center;">
+	    			<h5 class="card-text" style="text-align: center; font-weight: bold;">Corn</h5>
+	    			<form action="/plants/corn" method="GET">
+						<button class="btn btn-primary btn-lg">Provide Image and predict Disease</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6 col-sm-6" style="margin-bottom: 10px;">
+			<div class="card">
+	  			<img src="https://p1.pxfuel.com/preview/363/523/682/grapes-fruit-eat-healthy-grapevine-ripe.jpg" class="card-img-top image-on-card">
+	  			<div class="card-body" style="text-align: center;">
+	    			<h5 class="card-text" style="text-align: center; font-weight: bold;">Grapes</h5>
+	    			<form action="/plants/grapes" method="GET">
+						<button class="btn btn-primary btn-lg">Provide Image and predict Disease</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6 col-sm-6" style="margin-bottom: 10px;">
+			<div class="card">
+	  			<img src="https://i2.pickpik.com/photos/152/667/659/peach-fruit-mature-preview.jpg" class="card-img-top image-on-card">
+	  			<div class="card-body" style="text-align: center;">
+	    			<h5 class="card-text" style="text-align: center; font-weight: bold;">Peach</h5>
+	    			<form action="/plants/peach" method="GET">
+						<button class="btn btn-primary btn-lg">Provide Image and predict Disease</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6 col-sm-6" style="margin-bottom: 10px;">
+			<div class="card">
+	  			<img  src="https://c1.peakpx.com/wallpaper/926/693/122/potatoes-vegetables-erdfrucht-bio-wallpaper-preview.jpg" class="card-img-top image-on-card">
+	  			<div class="card-body" style="text-align: center;">
+	    			<h5 class="card-text" style="text-align: center; font-weight: bold;">Potato</h5>
+	    			<form action="/plants/potato" method="GET">
+						<button class="btn btn-primary btn-lg">Provide Image and predict Disease</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6 col-sm-6" style="margin-bottom: 10px;">
+			<div class="card">
+	  			<img src="https://cdn.pixabay.com/photo/2016/08/07/18/35/strawberry-plant-1576825_960_720.jpg" class="card-img-top image-on-card">
+	  			<div class="card-body" style="text-align: center;">
+	    			<h5 class="card-text" style="text-align: center; font-weight: bold;">Strawberry</h5>
+	    			<form action="/plants/strawberry" method="GET">
+						<button class="btn btn-primary btn-lg">Provide Image and predict Disease</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-sm-6" style="margin-bottom: 10px;">
+			<div class="card">
+	  			<img src="https://c1.peakpx.com/wallpaper/290/804/949/food-vegetable-plant-garden-tomato-wallpaper-preview.jpg" class="card-img-top image-on-card">
+	  			<div class="card-body" style="text-align: center;">
+	    			<h5 class="card-text" style="text-align: center; font-weight: bold;">Tomato</h5>
+	    			<form action="/plants/tomato" method="GET">
+						<button class="btn btn-primary btn-lg">Provide Image and predict Disease</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+</div>
+
+
+
+
+
+<!-- <form action="/plants/apple" method="GET">
+	<button>apple</button>
+</form>
+<form action="/plants/cherry" method="GET">
+	<button>cherry</button>
+</form>
+<form action="/plants/corn" method="GET">
+	<button>corn</button>
+</form>
+<form action="/plants/grapes" method="GET">
+	<button>grapes</button>
+</form>
+<form action="/plants/peach" method="GET">
+	<button>peach</button>
+</form>
+<form action="/plants/potato" method="GET">
+	<button>potato</button>
+</form>
+<form action="/plants/strawberry" method="GET">
+	<button>strawberry</button>
+</form>
+<form action="/plants/tomato" method="GET">
+	<button>tomato</button>
+</form> -->
+
+<%- include('partials/footer') %>

@@ -1,0 +1,62 @@
+<%- include('partials/header') %>
+
+
+<% 
+	if(plant_name === "apple")
+		var label = ["Apple Scab", "Black Rot", "Cedar Apple Rust", "Healthy"];
+	else if(plant_name === "cherry")
+		var label = ["Powdery Mildew", "Healthy"];
+	else if(plant_name === "corn")
+		var label = ["Gray Leaf Spot", "Common Rust", "Northern Leaf Blight", "Healthy" ];
+	else if(plant_name === "grapes")
+		var label = ["Black Rot", "Black Measles", "Leaf Blight", "Healthy"];
+	else if(plant_name === "peach")
+		var label = ["Bacterial Spot", "Healthy"];
+	else if(plant_name === "potato")
+		var label = ["Early Blight", "Late Blight", "Healthy"];
+	else if(plant_name === "strawberry")
+		var label = ["Leaf Scorch", "Healthy"];
+	else if(plant_name === "tomato")
+		var label = ["Bacterial Spot", "Early Blight", "Late Blight", "Leaf Mold", "Septoria Leaf Spot", "Spider Mites", "Target Spot", "Tomato Mosaic Virus", "Yellow Leaf Curl VIrus", "Healthy"];
+
+	function indexOfMax(arr) {
+    	if (arr.length === 0) {
+        	return -1;
+    	}
+
+    	var max = arr[0];
+    	var maxIndex = 0;
+
+    	for (var i = 1; i < arr.length; i++) {
+        	if (arr[i] > max) {
+            	maxIndex = i;
+            	max = arr[i];
+        	}
+    	}
+
+    	return maxIndex;
+	}
+	var max_index = indexOfMax(predictions);
+	console.log(max_index);
+%>
+
+<div class="container">
+
+	<h1 id="result-heading">Results of the Prediction</h1>
+	<ul id="result-list" class="list-group">
+	  <% 
+	  	predictions.forEach(function(prediction, index) { 
+	  		prediction = prediction*100; 
+	  		prediction = prediction.toFixed(2); 
+	  		disease = label[index];
+	  		if(index === max_index) {%>
+	  			<li class="list-group-item list-group-item-success"><strong><%= disease %></strong> - <%= prediction %>%</li>
+	  		<% } else {%>
+	  			<li class="list-group-item"><strong><%= disease %></strong> - <%= prediction %>%</li>
+	  		<% } %>
+  		<%});%>
+	</ul>
+
+</div>
+
+<%- include('partials/footer') %>
